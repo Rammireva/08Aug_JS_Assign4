@@ -1,0 +1,24 @@
+<html>
+<head><title>Advanced JS</title></head>
+<body>
+<form novalidate>
+    <input type="text" name="name" id="name"><br />
+    <input type="text" name="age" id="age"><br />
+    <input type="text" name="city" id="city"><br />
+    <input type="submit" name="submit" id="submit">
+</form>
+<h3></h3>
+</body>
+<script>
+    var sub = document.getElementById('submit');
+    sub.onclick = function(e){
+        e.preventDefault();
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var city = document.getElementById('city').value;
+        (function(){
+            document.getElementsByTagName('h3')[0].innerHTML = 'Name is ' + name + ' Age is ' + age + ' City is ' + city;
+        }())
+    }
+</script>
+</html>
